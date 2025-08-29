@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import {Prism as SyntaxHighlighter} from "react-syntax-highlighter" ;
+import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -87,6 +89,62 @@ export const Hero = () => {
                    <i class="fa-solid fa-envelope"></i>
                 </motion.a>
           </motion.div>
+        </motion.div>
+
+        <motion.div 
+          className="hero-image-container"
+          initial={{opacity: 0, x: 50}}
+          animate={{opacity: 1, x: 0}}
+          transition={{duration: 0.8, delay: 0.4}}
+        >
+
+          <div className="code-display">
+            <SyntaxHighlighter 
+              language="python" 
+              style={vscDarkPlus}
+              customStyle={{margin:0,
+                padding:"1.5rem", 
+                height:"100%", 
+                borderRadius:"20px",
+                background: "rgba(30, 41, 59, 0.8)",
+                backdropFilter: "blur(10px)",
+                backdropFilter: "blur(10px)",
+                marginBottom: 50,
+              }}
+            >
+              {`from fastapi import FastAPI
+from pydantic import BaseModel
+import joblib
+import pandas as pd 
+from typing import List
+
+# Initialize the FastAPI app
+app = FastAPI(title = "Human Activity Recognition API" )
+
+# 2. Define the input data model using Pydantic
+class Features(BaseModel):
+    features: List[float] 
+
+# Loading the saved components
+model = joblib.load("Models/HAR-model.pkl")
+pca = joblib.load("Models/pca.pkl")
+scaler = joblib.load("Models/scaler.pkl")
+label_encoder = joblib.load("Models/label_encoder.pkl")`}
+            </SyntaxHighlighter>
+          </div>
+
+          <motion.div 
+            className="floating-card" 
+            animate={{y: [0, -10, 0], rotate: [0, 2, 0]
+            }}
+             transition={{duration:4, repeat: Infinity, ease: "easeInOut"}}
+          >
+            <div className="card-content">
+              <span className="card-icon">💻</span>
+              <span className="card-text">Currently working on something awesome!</span>
+            </div>
+          </motion.div>
+
         </motion.div>
       </div>
     </motion.section>
