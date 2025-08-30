@@ -50,7 +50,7 @@ export const Navbar = () => {
           whileHover={{scale: 1.1}}
           whileTap={{scale: 0.9}}
          >
-          <a href="">Projects</a>
+          <a href="projects">Projects</a>
 
         </motion.li>
 
@@ -59,7 +59,7 @@ export const Navbar = () => {
           whileHover={{scale: 1.1}}
           whileTap={{scale: 0.9}}
          >
-          <a href="">About</a>
+          <a href="about">About</a>
 
         </motion.li>
 
@@ -68,7 +68,7 @@ export const Navbar = () => {
           whileHover={{scale: 1.1}}
           whileTap={{scale: 0.9}}
          >
-          <a href="">Contact</a>  
+          <a href="contact">Contact</a>  
 
         </motion.li>
 
