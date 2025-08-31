@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 
+
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },

@@ -100,6 +100,8 @@ body{
 
 }
 
+
+
 /* Hero section */
 .hero{
   min-height: 100vh;
@@ -119,6 +121,8 @@ body{
   margin: 0 auto;
   width: 100%;
   padding-top: 100px;
+  gap: 3rem;
+
 }
 
 .hero-content{
@@ -273,7 +277,6 @@ body{
 
 .code-display{
   width: 100%;
-
 }
 
 
@@ -547,3 +550,13 @@ body{
   border: 1px solid rgba(239, 68, 68, 0.2);
   color: #f87171;
 }
+
+/* Footer */
+.footer{
+  text-align: center;
+  padding: 2rem;
+  background: var(--background);
+  color: var(--text-color);
+  border-top: 1px solid var(--card-border);
+}
+
