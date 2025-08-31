@@ -43,12 +43,15 @@ export const Experience = () => {
             transition={{ duration: 0.5, delay: index * 0.2 }}
           >
             <div className="timeline-dot"></div>
-            <div className="timeline-content">
+            <motion.div 
+                className="timeline-content"
+                 whileHover={{ scale: 1.05, boxShadow: "0px 8px 20px rgba(0,0,0,0.3)" , transition: {duration: .2}}}
+            >
               <h3>{item.role}</h3>
               <p className="timeline-company">{item.company}</p>
               <p className="timeline-date">{item.date}</p>
               <p>{item.description}</p>
-            </div>
+            </motion.div>
           </motion.div>
         ))}
       </div>

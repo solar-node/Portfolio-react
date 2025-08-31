@@ -127,7 +127,7 @@ body{
     backdrop-filter: blur(12px);       /* blur effect */
     transform: translateX(100%);
     z-index: 1100;
-    align-items: flex-end;   /* 👈 Push links to the right */
+    align-items: flex-end;  
     text-align: right;  
   }
 
@@ -471,7 +471,7 @@ body{
 /* Contact section */
 .contact{
   padding: 6rem 5%;
-  background: var(--section-bg);
+  background: black;
   position: relative;
 }
 
@@ -596,11 +596,9 @@ body{
   border-top: 1px solid var(--card-border);
 }
 
-
-/* --- About Section --- */
 .about {
-  padding: 6rem 5%;
-  background: var(--background);
+  padding: 6rem 10%;
+   background: linear-gradient(135deg, #0f172a, #1e293b);
 }
 
 .about h2 {
@@ -609,64 +607,134 @@ body{
   margin-bottom: 3rem;
 }
 
-.about-container {
+/* Row 1 */
+.about-top {
   display: flex;
   align-items: flex-start;
-  gap: 3rem;
+  justify-content: center;
+  gap: 4rem;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 4rem auto; 
 }
 
 .about-image-container {
   flex: 1;
-  max-width: 400px;
+  max-width: 350px;
 }
 
 .about-image {
   width: 100%;
   border-radius: 1rem;
   border: 2px solid var(--card-border);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-image:hover {
+  transform: translateY(-10px) scale(1.1);
+  box-shadow: 0 5px 10px rgba(124, 58, 237, 0.4);
 }
 
 .about-content {
-  flex: 1.5;
+  flex: 2;
 }
-
 .about-content h3 {
   font-size: 2rem;
-  color: var(--accent-color);
   margin-bottom: 1rem;
-  text-align: center;
+  color: white;
 }
-
 .about-content p {
   margin-bottom: 1rem;
   color: var(--light-text);
+  transition: color 0.3s ease;
+}
+.about-content p:hover{
+  color: white;
 }
 
+@media (max-width: 1000px) {
+  .about-top {
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .about-image-container {
+    order: -1;               
+    margin-bottom: 2rem;
+  }
+
+  .about-content {
+    order: 0;                 /* text comes after image */
+    text-align: center;
+  }
+
+  .skills-box {
+    margin-top: 2.5rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+/* Row 2 (skills below) */
+.about h3{
+  font-size: 2.5rem;
+}
+.skills-box {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Skills container */
+.skills-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 10% ;
+  background: rgba(255, 255, 255, 0.05); /* translucent */
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4)
+}
+
+/* Category headings */
+.skill-category h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-weight: 600;
+  color: #f472b6; 
+}
+
+
+/* Grid of skills */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 1rem;
-  margin-top: 2rem;
 }
 
 .skill-item {
-  background: var(--section-bg);
-  padding: 0.8rem;
-  border-radius: 0.5rem;
+  background: rgba(255,255,255,0.05);
+  padding: 0.9rem;
+  border-radius: 0.7rem;
   text-align: center;
   font-weight: 500;
-  border: 1px solid var(--card-border);
+  color: var(--text-color);
+  border: 1px solid rgba(255,255,255,0.1);
   transition: all 0.3s ease;
 }
 
 .skill-item:hover {
-  transform: translateY(-5px);
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+  transform: translateY(-5px) scale(1.05);
+  border-color: grey;
+  box-shadow: 0 2px 4px rgba(242, 242, 242, 0.037);
 }
+
 
 /* --- Experience Section --- */
 .experience {
@@ -757,6 +825,35 @@ body{
   color: var(--light-text);
   font-size: 0.9rem;
   margin-bottom: 1rem;
+}
+
+
+.timeline-content::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    var(--gradient-start-project) 0%,
+    var(--gradient-end-project) 100%
+  );
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.timeline-content:hover::before{
+  opacity: 0.1;
+}
+
+.timeline-content:hover{
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: o 8px 30px rgba(0, 0, 0, 0.3);
+  border-color: var(--accent-color);
 }
 
 /* --- Responsive Media Queries for New Sections --- */

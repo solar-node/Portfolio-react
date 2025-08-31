@@ -22,11 +22,9 @@ function App() {
       <Navbar/>
 
       <Hero/>
+      <Projects/>
       <About/>
       <Experience/>
-
-      <Projects/>
-
       <Contact/>
 
       <motion.footer
