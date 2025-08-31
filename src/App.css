@@ -100,7 +100,43 @@ body{
 
 }
 
+/* Adding hamburger */
+.hamburger-wrapper {
+  display: none;
+  
+}
 
+@media (max-width: 550px) {
+  .hamburger-wrapper {
+    display: block;
+    z-index: 1100;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    /* left: auto; */ /* removed as per instructions */
+    right: 0;
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: rgba(15, 23, 42, 0.871); /* semi-transparent */
+    padding: 2rem;
+    transition: transform 0.4s ease;
+    backdrop-filter: blur(12px);       /* blur effect */
+    transform: translateX(100%);
+    z-index: 1100;
+    align-items: flex-end;   /* 👈 Push links to the right */
+    text-align: right;  
+  }
+
+  .nav-links.open {
+    transform: translateX(0);
+  }
+ 
+
+}
 
 /* Hero section */
 .hero{
@@ -559,4 +595,3 @@ body{
   color: var(--text-color);
   border-top: 1px solid var(--card-border);
 }
-

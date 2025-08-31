@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { Sling as Hamburger } from "hamburger-react";
 
 const fadeInUp = {
   initial: {opacity: 0, y: 20},
@@ -15,6 +17,7 @@ const staggerContainer = {
 }
 
 export const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return(
     <motion.nav 
       className="navbar" 
@@ -30,8 +33,12 @@ export const Navbar = () => {
         Portfolio
       </motion.div>
 
+      <div className="hamburger-wrapper">
+        <Hamburger toggled={isOpen} toggle={setIsOpen} color="#e2e8f0" />
+      </div>
+
       <motion.ul 
-        className="nav-links" 
+        className={`nav-links ${isOpen ? "open" : ""}`} 
         variants={staggerContainer}
         initial = "initial"
         animate = "animate"
@@ -50,7 +57,7 @@ export const Navbar = () => {
           whileHover={{scale: 1.1}}
           whileTap={{scale: 0.9}}
          >
-          <a href="projects">Projects</a>
+          <a href="#projects">Projects</a>
 
         </motion.li>
 
@@ -59,7 +66,7 @@ export const Navbar = () => {
           whileHover={{scale: 1.1}}
           whileTap={{scale: 0.9}}
          >
-          <a href="about">About</a>
+          <a href="#about">About</a>
 
         </motion.li>
 
@@ -68,7 +75,7 @@ export const Navbar = () => {
           whileHover={{scale: 1.1}}
           whileTap={{scale: 0.9}}
          >
-          <a href="contact">Contact</a>  
+          <a href="#contact">Contact</a>  
 
         </motion.li>
 
