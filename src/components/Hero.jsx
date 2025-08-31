@@ -86,7 +86,7 @@ export const Hero = () => {
                 </motion.a>
 
                 <motion.a href="2023nitsgr094@nitsri.ac.in" target="_blank">
-                   <i class="fa-solid fa-envelope"></i>
+                   <i className="fa-solid fa-envelope"></i>
                 </motion.a>
           </motion.div>
         </motion.div>
