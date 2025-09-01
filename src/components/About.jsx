@@ -37,8 +37,12 @@ export const About = () => {
       <motion.h2 variants={fadeInUp}>About Me</motion.h2>
 
       <div className="about-top">
-        <motion.div className="about-image-container" variants={fadeInUp}>
-          <img src="Assets/ai-saas.png" alt="Aditya" className="about-image" />
+        <motion.div 
+            className="about-image-container" 
+            variants={fadeInUp}
+             whileHover={{ scale: 1.05, transition: { duration: 0.3, ease: "easeOut" } }}
+        >
+          <img src="Assets/about-me.jpeg" alt="Aditya" className="about-image" />
         </motion.div>
 
         <motion.div className="about-content" variants={fadeInUp}>
