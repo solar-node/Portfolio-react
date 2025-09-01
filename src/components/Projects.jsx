@@ -31,17 +31,22 @@ export const Projects = () => {
         viewport={{ once: true }}
       >
         My Projects
-
       </motion.h2>
-        <motion.div
-          className="project-grid"
-          variants={staggerContainer}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
+      <motion.div
+        className="project-grid"
+        variants={staggerContainer}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+      >
+
+       
+        <a
+          href="https://github.com/solar-node/Human-Activity-Recognition"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-link"
         >
-
-
           <motion.div
             className="project-card"
             variants={fadeInUp}
@@ -50,53 +55,31 @@ export const Projects = () => {
             <motion.div
               className="project-image"
               style={{
-                backgroundImage:
-                  "url('public/Assets/Banner.png')",
+                backgroundImage: "url('public/Assets/Banner.png')",
               }}
               whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
             />
-              <h3>Human Activity Predictor</h3>
-              <p>
-                It predicts the acitvity of a person from the built in phone
-                sensors. The model is 94.16% accurate in its predictions.
-              </p>
-              <div className="project-tech">
-                <span>XGBoost</span>
-                <span>Fast API</span>
-                <span>PCA</span>
-              </div>
-            </motion.div>
-
-
-
-            <motion.div
-            className="project-card"
-            variants={fadeInUp}
-            whileHover={{ y: -10, transition: { duration: 0.2 } }}
-          >
-            <motion.div
-              className="project-image"
-              style={{
-                backgroundImage:
-                  "url('public/Assets/Banner.png')",
-              }}
-              whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-            />
-              <h3>Human Activity Predictor</h3>
-              <p>
-                It predicts the acitvity of a person from the built in phone
-                sensors. The model is 94.16% accurate in its predictions.
-              </p>
-              <div className="project-tech">
-                <span>XGBoost</span>
-                <span>Fast API</span>
-                <span>PCA</span>
-              </div>
+            <h3>Human Activity Predictor</h3>
+            <p>
+              It predicts the acitvity of a person from the built in phone
+              sensors. The model is 94.16% accurate in its predictions.
+            </p>
+            <div className="project-tech">
+              <span>XGBoost</span>
+              <span>Fast API</span>
+              <span>PCA</span>
+            </div>
           </motion.div>
+        </a>
 
 
 
-
+        <a
+          href="https://github.com/solar-node/Heart-Disease-Prediction"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-link"
+        >
           <motion.div
             className="project-card"
             variants={fadeInUp}
@@ -105,27 +88,56 @@ export const Projects = () => {
             <motion.div
               className="project-image"
               style={{
-                backgroundImage:
-                  "url('public/Assets/Banner.png')",
+                backgroundImage: "url('public/Assets/heart-disease-predictor.webp')",
               }}
               whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
             />
-              <h3>Human Activity Predictor</h3>
-              <p>
-                It predicts the acitvity of a person from the built in phone
-                sensors. The model is 94.16% accurate in its predictions.
-              </p>
-              <div className="project-tech">
-                <span>XGBoost</span>
-                <span>Fast API</span>
-                <span>PCA</span>
-              </div>
-            </motion.div>
+            <h3>Heart disease Predictor</h3>
+            <p>
+              A machine learning model to predict the likelihood of heart disease in patients, achieving an accuracy of 88.52%.
+            </p>
+            <div className="project-tech">
+              <span>Random Forest</span>
+              <span>Scikit-learn</span>
+              <span>Pandas</span>
+            </div>
+          </motion.div>
+        </a>
 
 
 
 
-        </motion.div>
+        <a
+          href="https://github.com/solar-node/ML/blob/main/ColorDetection.py"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-link"
+        >
+          <motion.div
+            className="project-card"
+            variants={fadeInUp}
+            whileHover={{ y: -10, transition: { duration: 0.2 } }}
+          >
+            <motion.div
+              className="project-image"
+              style={{
+                backgroundImage: "url('public/Assets/color-detection.png')",
+              }}
+              whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+            />
+            <h3>Real-Time Color Detection</h3>
+            <p>
+               Uses OpenCV to detect and track specific colors from a live webcam feed, drawing a bounding box around in real-time.
+            </p>
+            <div className="project-tech">
+              <span>OpenCV</span>
+              <span>Pillow</span>
+              <span>Numpy</span>
+            </div>
+          </motion.div>
+        </a>
+
+      </motion.div>
     </motion.section>
   );
 };

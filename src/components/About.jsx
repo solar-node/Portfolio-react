@@ -1,10 +1,15 @@
 import { motion } from "framer-motion";
 
-const fadeIn = {
+const fadeInUp = {
   initial: { opacity: 0, y: 50 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
+  animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6, ease: "easeOut" },
+};
+
+const staggerContainer = {
+  animate: {
+    transition: { staggerChildren: 0.15 },
+  },
 };
 
 export const About = () => {
@@ -24,18 +29,19 @@ export const About = () => {
     <motion.section
       id="about"
       className="about"
+      variants={staggerContainer}
       initial="initial"
-      whileInView="whileInView"
+      whileInView="animate"
       viewport={{ once: true }}
     >
-      <motion.h2 variants={fadeIn}>About Me</motion.h2>
+      <motion.h2 variants={fadeInUp}>About Me</motion.h2>
 
       <div className="about-top">
-        <motion.div className="about-image-container" variants={fadeIn}>
+        <motion.div className="about-image-container" variants={fadeInUp}>
           <img src="/Assets/ai-saas.png" alt="Aditya" className="about-image" />
         </motion.div>
 
-        <motion.div className="about-content" variants={fadeIn}>
+        <motion.div className="about-content" variants={fadeInUp}>
           <p>
             I am a B.Tech student at NIT Srinagar with experience in machine
             learning, computer vision, and web development. Proficient in
@@ -52,20 +58,20 @@ export const About = () => {
         </motion.div>
       </div>
 
-      <motion.div className="skills-box" variants={fadeIn}>
+      <motion.div className="skills-box" variants={fadeInUp}>
         <h3>Skills</h3>
         <div className="skills-categories">
           {Object.entries(skills).map(([category, items], index) => (
-            <div key={index} className="skill-category">
+            <motion.div key={index} className="skill-category" variants={fadeInUp}>
               <h4>{category}</h4>
               <div className="skills-grid">
                 {items.map((skill, idx) => (
-                  <div key={idx} className="skill-item">
+                  <motion.div key={idx} className="skill-item" variants={fadeInUp}>
                     {skill}
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </motion.div>

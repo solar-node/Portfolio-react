@@ -97,7 +97,7 @@ export const Contact = () => {
         animate="animate"
         viewport={{ once: true }}
       >
-        Get in Touch
+        Contact Me
       </motion.h2>
 
       <motion.div className="contact-content" variants={fadeInUp}>
