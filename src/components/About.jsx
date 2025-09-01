@@ -38,7 +38,7 @@ export const About = () => {
 
       <div className="about-top">
         <motion.div className="about-image-container" variants={fadeInUp}>
-          <img src="/Assets/ai-saas.png" alt="Aditya" className="about-image" />
+          <img src="Assets/ai-saas.png" alt="Aditya" className="about-image" />
         </motion.div>
 
         <motion.div className="about-content" variants={fadeInUp}>

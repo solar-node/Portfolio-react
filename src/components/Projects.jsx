@@ -55,7 +55,7 @@ export const Projects = () => {
             <motion.div
               className="project-image"
               style={{
-                backgroundImage: "url('public/Assets/Banner.png')",
+                backgroundImage: "url('Assets/Banner.png')",
               }}
               whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
             />
@@ -88,7 +88,7 @@ export const Projects = () => {
             <motion.div
               className="project-image"
               style={{
-                backgroundImage: "url('public/Assets/heart-disease-predictor.webp')",
+                backgroundImage: "url('Assets/heart-disease-predictor.webp')",
               }}
               whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
             />
@@ -121,7 +121,7 @@ export const Projects = () => {
             <motion.div
               className="project-image"
               style={{
-                backgroundImage: "url('public/Assets/color-detection.png')",
+                backgroundImage: "url('Assets/color-detection.png')",
               }}
               whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
             />
