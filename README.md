@@ -1,12 +1,83 @@
-# React + Vite
+# Aditya's Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website built with React and Vite to showcase my projects, skills, and experience in AI & Machine Learning.
 
-Currently, two official plugins are available:
+**Live Demo:** [https://portfolio-react-omega-snowy.vercel.app/](https://portfolio-react-omega-snowy.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Portfolio Screenshot](public/Assets/Screenshot-portfolio.png)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Key Features
+- **Modern UI/UX:** Built with React and animated with Framer Motion for a smooth, responsive experience.
+- **Project Showcase:** A grid displaying my top ML projects with links to their codebases.
+- **Interactive Timeline:** A summary of my internship and educational background.
+- **Functional Contact Form:** Allows visitors to send messages directly using EmailJS.
+
+---
+
+## 🛠️ Built With
+- React
+- Vite
+- Framer Motion
+- EmailJS
+- React Syntax Highlighter
+- Hamburger React
+
+---
+
+## 🚀 Getting Started
+
+To run this project locally:
+
+1.  **Clone the repository**
+    ```sh
+    git clone [https://github.com/solar-node/Portfolio-react.git](https://github.com/solar-node/Portfolio-react.git)
+    ```
+
+2.  **Install dependencies**
+    ```sh
+    cd Portfolio-react
+    npm install
+    ```
+
+3.  **Set up environment variables**
+    Create a `.env` file in the root directory and add your EmailJS credentials:
+    ```
+    VITE_EMAILJS_SERVICE_ID='YOUR_SERVICE_ID'
+    VITE_EMAILJS_TEMPLATE_ID='YOUR_TEMPLATE_ID'
+    VITE_EMAILJS_PUBLIC_KEY='YOUR_PUBLIC_KEY'
+    ```
+
+4.  **Run the app**
+    ```sh
+    npm run dev
+    ```
+
+---
+
+### 📂 Project Structure
+```plaintext
+Portfolio-react/
+├── .gitignore          
+├── README.md         
+├── eslint.config.js    
+├── index.html          # The main HTML entry point for the app
+├── public/             # Contains static assets that don't need processing
+│   └── Assets/
+│       ├── favicon.ico
+│       └── vite.svg
+└── src/                # Contains all the source code for the application
+    ├── assets/         # Contains assets like images that are used in components
+    │   └── react.svg
+    ├── components/     # Contains reusable React components
+    │   ├── About.jsx
+    │   ├── Contact.jsx
+    │   ├── Experience.jsx
+    │   ├── Hero.jsx
+    │   ├── Navbar.jsx
+    │   └── Projects.jsx
+    ├── App.css         # Main stylesheet for the App component
+    ├── App.jsx         # The root React component
+    ├── index.css       # Global styles for the entire application
+    └── main.jsx        # The entry point that renders the React app
