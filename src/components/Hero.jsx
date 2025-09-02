@@ -55,12 +55,14 @@ export const Hero = () => {
 
           <motion.div className="cta-buttons" variants={staggerContainer}>
             <motion.a
-              href="#projects"
+              href="https://drive.google.com/file/d/1gLjIueLOH8wbsvLxYNrLjtD0gyVD0TTn/view?usp=sharing"
               className="cta-primary"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              View my work
+              Resume
             </motion.a>
 
             <motion.a
@@ -85,7 +87,7 @@ export const Hero = () => {
                     <i className="fab fa-linkedin"></i>
                 </motion.a>
 
-                <motion.a href="2023nitsgr094@nitsri.ac.in" target="_blank">
+                <motion.a href="mailto:2023nitsgr094@nitsri.ac.in" target="_blank">
                    <i className="fa-solid fa-envelope"></i>
                 </motion.a>
           </motion.div>
