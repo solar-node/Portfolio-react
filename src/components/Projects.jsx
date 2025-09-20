@@ -58,7 +58,7 @@ export const Projects = () => {
             <motion.div
               className="project-image"
               style={{
-                backgroundImage: "url('public/Assets/AI-tutor.webp')",
+                backgroundImage: "url('Assets/AI-tutor.webp')",
               }}
               whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
             />
@@ -90,7 +90,7 @@ export const Projects = () => {
             <motion.div
               className="project-image"
               style={{
-                backgroundImage: "url('public/Assets/Screenshot 2025-09-20 at 3.11.17 PM.png')",
+                backgroundImage: "url('Assets/web-rag.png')",
               }}
               whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
             />
