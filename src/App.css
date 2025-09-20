@@ -693,6 +693,11 @@ body{
     text-align: center;
   }
 }
+
+
+
+
+
 /* Row 2 (skills below) */
 .about h3{
   font-size: 2.5rem;
@@ -751,6 +756,7 @@ body{
   border-color: grey;
   box-shadow: 0 2px 4px rgba(242, 242, 242, 0.037);
 }
+
 
 
 /* --- Experience Section --- */

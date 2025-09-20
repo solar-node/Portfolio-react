@@ -48,9 +48,9 @@ export const Hero = () => {
           </motion.h2>
 
           <motion.p className="hero-description" variants={fadeInUp}>
-            I work on building and deploying machine learning models, focusing
-            on data preprocessing, feature engineering, and model optimization.
-            My goal is to create scalable and interpretable AI solutions.
+           I build and deploy AI solutions, specializing in RAG systems, 
+           multi-turn conversational agents, and document intelligence pipelines. 
+           My goal is to create scalable, context-aware, and impactful AI applications.
           </motion.p>
 
           <motion.div className="cta-buttons" variants={staggerContainer}>
@@ -114,24 +114,25 @@ export const Hero = () => {
                 marginBottom: 50,
               }}
             >
-              {`from fastapi import FastAPI
-from pydantic import BaseModel
-import joblib
-import pandas as pd 
-from typing import List
+              {`class CurriculumManager:
+""" Manages the book's curriculum """
 
-# Initialize the FastAPI app
-app = FastAPI(title = "Human Activity Recognition API" )
+def __init__(self, chunks : list):
+  self.chunks = chunks
+  self.curriculum = self.build_curriculum()
+  self.current_topic_index = 0
 
-# 2. Define the input data model using Pydantic
-class Features(BaseModel):
-    features: List[float] 
 
-# Loading the saved components
-model = joblib.load("Models/HAR-model.pkl")
-pca = joblib.load("Models/pca.pkl")
-scaler = joblib.load("Models/scaler.pkl")
-label_encoder = joblib.load("Models/label_encoder.pkl")`}
+def build_curriculum(self):
+  curriculum = [] # creates empty list
+  seen_topics = set() # Creates an empty set
+  for chunk in self.chunks: 
+
+  # We build a topic string based on hierarchy of splitter
+  part = chunk.metadata.get("Part")
+  chapter = chunk.metadata.get("Chapter")
+  section = chunk.metadata.get("Section")
+`}
             </SyntaxHighlighter>
           </div>
 
@@ -143,7 +144,7 @@ label_encoder = joblib.load("Models/label_encoder.pkl")`}
           >
             <div className="card-content">
               <span className="card-icon">💻</span>
-              <span className="card-text">Currently working on something awesome!</span>
+              <span className="card-text">Currently working on Something Awesome!</span>
             </div>
           </motion.div>
 

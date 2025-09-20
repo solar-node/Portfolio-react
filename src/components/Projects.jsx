@@ -40,7 +40,75 @@ export const Projects = () => {
         viewport={{ once: true }}
       >
 
-       
+
+
+
+
+ <a
+          href="https://github.com/solar-node/AI-Tutor"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-link"
+        >
+          <motion.div
+            className="project-card"
+            variants={fadeInUp}
+            whileHover={{ y: -10, transition: { duration: 0.2 } }}
+          >
+            <motion.div
+              className="project-image"
+              style={{
+                backgroundImage: "url('public/Assets/AI-tutor.webp')",
+              }}
+              whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+            />
+            <h3>Personalized AI Tutor </h3>
+            <p>
+              A conversational RAG-based tutor delivering textbook-grounded answers with multi-turn learning experience.
+            </p>
+            <div className="project-tech">
+              <span>Langchain</span>
+              <span>Gemini</span>
+              <span>ChromaDB</span>
+            </div>
+          </motion.div>
+        </a>
+
+
+
+ <a
+          href="https://web-rag-chat.streamlit.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-link"
+        >
+          <motion.div
+            className="project-card"
+            variants={fadeInUp}
+            whileHover={{ y: -10, transition: { duration: 0.2 } }}
+          >
+            <motion.div
+              className="project-image"
+              style={{
+                backgroundImage: "url('public/Assets/Screenshot 2025-09-20 at 3.11.17 PM.png')",
+              }}
+              whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+            />
+            <h3>Semantic Web Search AI</h3>
+            <p>
+             A RAG-based system that answers questions using web content with 
+            embeddings and FAISS vector search.
+            </p>
+            <div className="project-tech">
+              <span>FAISS </span>
+              <span>Groq LLM</span>
+              <span>Streamlit</span>
+            </div>
+          </motion.div>
+        </a>
+
+
+ 
         <a
           href="https://github.com/solar-node/Human-Activity-Recognition"
           target="_blank"
