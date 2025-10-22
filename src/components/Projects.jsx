@@ -45,7 +45,7 @@ export const Projects = () => {
 
 
  <a
-          href="https://github.com/solar-node/AI-Tutor"
+          href="https://ai-tutor-solarnode.streamlit.app/"
           target="_blank"
           rel="noopener noreferrer"
           className="project-link"
